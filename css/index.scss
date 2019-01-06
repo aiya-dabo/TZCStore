@@ -1,0 +1,243 @@
+
+// 全局字体颜色
+$fontcolor: #9e8387;
+// 顶部导航
+.top_nav{
+.row{
+    div{
+        border-bottom: 1px solid #000;
+        border-left: 1px solid #000;
+        height: 40px;
+        line-height: 40px;
+        text-align: center; 
+        a{
+           color: $fontcolor;  
+        }
+        .wjs_code{
+            position: relative;
+            img{
+            position: absolute;
+             left: 0;
+             top: 20px;
+            //  display: none;
+             opacity: 0;
+             transition: opacity 0.5s; 
+            }
+            &:hover img {
+                // display: block;
+                opacity: 1;
+                z-index: 10;
+            }
+        }
+        .btn-danger{
+            color:#fff;
+        }
+    }
+    div:nth-child(1){
+        border-left: none; 
+    }
+}
+}
+
+// 导航条
+#wjs_nav{ 
+    nav{
+        margin-bottom: 0;
+    }
+    .navbar-brand{
+        font-size: 70px;
+        padding-top: 7px;
+        .wjsfont-logo{
+            color: red;
+        }
+        .wjsfont-name{}
+    } 
+    a{ 
+      height: 80px;
+      line-height: 80px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    a:hover,a:focus{
+        border-bottom: 1px solid red;
+    }
+}
+
+// 轮播图
+.wjs_slides{
+    img{
+        width: 100%;
+    }
+ }
+
+// 支付交易保障
+.exchange{
+    padding: 40px 0 0 20px;
+    .row>div{
+        margin-bottom: 20px;
+    }
+    a{ 
+        color: $fontcolor;
+        .media-left{
+         .wjsfont{
+             font-size: 40px;
+         }
+        }
+        .media-body{
+
+        }
+    }
+    a:hover{
+        color: red; 
+    }
+   
+}
+// 正在排队
+.wjs_wait{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 30px 0;
+    .pull-left{
+     a{
+         border-bottom: 1px solid red;
+         color: red;
+     }
+    }
+    .pull-right{
+      a { 
+          color: #000;
+      }
+    }
+}
+
+// 微投资
+.wjs_buy{
+    .cart_default{
+        display: block;
+        padding-right: 80px;
+        position: relative;
+        color: $fontcolor;
+        background-color: #f7f7f7;
+        box-shadow: 0 0 9px 5px #ccc;
+        margin-bottom: 20px;
+        .cart_content{
+            padding: 0 5px;
+            border-right: 1px dashed #000;
+          h4{
+              text-align: center;
+              padding-top: 20px;
+          }
+          .pull-left,.pull-right{
+              width: 50%;
+          }
+        }
+        .cart_rate{
+            width: 80px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+           text-align: center;
+           padding-top: 52px;
+           &::before{
+             content:"";
+             width: 20px;
+             height: 20px;
+             border-radius: 50%;
+             background-color: #fff;
+             position: absolute;
+             top: -10px;
+             left: -10px;
+             box-shadow: 0 3px 0 0 #ccc; 
+           }
+           &::after{
+            content:"";
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            bottom: -10px;
+            left: -10px;
+            box-shadow: 0 -3px 0 0 #ccc; 
+           }
+        }
+    }
+    .cart_danger{
+        background-color: red;
+        color: #fff;
+        .cart_content{
+            border-color: #fff; 
+            position: relative;
+            .wjsfont{
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 40px;
+            }
+        }
+    }
+    .cart_progress{
+     .cart_rate{
+         .tips{
+          span:nth-child(1){
+            border: 1px solid green;
+            color: green;
+          }
+          span:nth-of-type(2){
+              border: 1px solid red;
+              color: red;
+        } 
+         }
+     }
+    }
+}
+
+// 全部新闻
+.wjs_news{
+    .all_news{
+        border-bottom: 1px solid #000;
+        font-size: 30px;
+        position: relative;
+        &::before{
+            content:"";
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            position: absolute;
+            bottom: -5px;
+            right: -10px;
+        }
+    }
+    .news_title{
+        .line{
+             width: 0;
+             height: 400px;
+             border-left: 1px dashed #000;
+             position: absolute;
+             left: 87px;
+             z-index: -1; 
+        }
+        ul{
+            list-style: none;
+            li{
+                margin-bottom: 55px;
+                a{  
+                    display: inline-block;
+                    background-color: #ccc;
+                    border-radius: 50%;
+                    padding: 10px;
+                    color: #fff;
+                    .wjsfont{
+                        font-size: 50px;
+                    }
+                    &:hover , &:focus{
+                        background-color: red;
+                    }
+                }
+            }
+        }
+    }
+    .news_content{}
+}
